@@ -2,6 +2,7 @@ package com.xss;
 
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
 import com.github.miemiedev.mybatis.paginator.domain.Paginator;
+import org.springframework.http.HttpMethod;
 
 /**
  * Created by Administrator on 2017/7/1 0001
@@ -20,4 +21,18 @@ public final class Const {
 
     /** 分页空对象 **/
     public static final PageList EMPTY_PAGE_LIST = new PageList<>( new Paginator( DEFAULT_PAGE_NO, DEFAULT_LIMIT, 0 ) );
+
+    /** cors 支持的所有方法. 原则上来说, 国内复杂的浏览器环境, 开发时只支持 get 和 post 就好了, 其他忽略 */
+    public static final String[] SUPPORT_METHODS = new String[] {
+            HttpMethod.HEAD.name(),
+
+            HttpMethod.GET.name(),
+            HttpMethod.POST.name(),
+
+            HttpMethod.PUT.name(),
+            HttpMethod.DELETE.name(),
+            HttpMethod.OPTIONS.name(),
+            HttpMethod.PATCH.name(),
+            HttpMethod.TRACE.name()
+    };
 }

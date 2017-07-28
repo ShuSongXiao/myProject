@@ -1,0 +1,11 @@
+# 配置文件可以有 application.yml 和 application.properties 这里使用yml
+# mysql 配置 这里 url  username password 与实际使用配置一致
+spring:
+  mvc.throw-exception-if-no-handler-found: true
+  resources.add-mappings: false
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.32.180:3306/xssspace?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
+      username: xsslibe
+      password: xssroot
