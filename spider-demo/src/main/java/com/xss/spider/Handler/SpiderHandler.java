@@ -16,7 +16,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by Administrator on 2017/7/19 0019.
+ * Created by Administrator on 2017/7/19 0019
+ *
  */
 @Component
 public class SpiderHandler {
@@ -25,7 +26,7 @@ public class SpiderHandler {
     public void spiderData() {
         LogUtil.ROOT_LOG.info("爬虫开始....");
         Date startDate = new Date();
-        // 使用现线程池提交任务
+        // 使用线程池提交任务
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         //引入countDownLatch进行线程同步，使主线程等待线程池的所有任务结束，便于计时
         CountDownLatch countDownLatch = new CountDownLatch(100);
@@ -39,6 +40,14 @@ public class SpiderHandler {
                 spiderService.spiderData(SysConstant.BASE_URL, params);
                 countDownLatch.countDown();
             });
+
+            /*executorService.submit(new Runnable() {
+                @Override
+                public void run() {
+                    spiderService.spiderData(SysConstant.BASE_URL, params);
+                    countDownLatch.countDown();
+                }
+            });*/
         }
         try {
             countDownLatch.await();
