@@ -36,6 +36,7 @@
         <module>web-java-test</module>
         <module>web-api</module>
         <module>spider-demo</module>
+        <module>project-test</module>
 
     </modules>
 
