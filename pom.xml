@@ -34,9 +34,10 @@
 
         <!--web项目-->
         <module>web-java-test</module>
-        <module>web-api</module>
+        <!--<module>web-api</module>-->
         <module>spider-demo</module>
         <module>project-test</module>
+        <module>project-redis</module>
 
     </modules>
 
