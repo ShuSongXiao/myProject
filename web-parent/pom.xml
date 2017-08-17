@@ -88,6 +88,12 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>project-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!--可添加其他项目依赖-->
 
             <!-- 支付通知, 需要我们实现服务端 -->
