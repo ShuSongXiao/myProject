@@ -1,5 +1,6 @@
 package com.xss.config;
 
+import com.github.miemiedev.mybatis.paginator.domain.PageBounds;
 import com.github.miemiedev.mybatis.paginator.springmvc.PageListAttrHandlerInterceptor;
 import com.google.common.collect.Lists;
 import com.xss.Const;
@@ -17,8 +18,10 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -51,6 +54,33 @@ public class ProjectRedisWebInit extends WebMvcConfigurationSupport {
         converters.add(new MappingJackson2HttpMessageConverter(JsonUtil.RENDER));
     }
 
+    /*page默认值设定  addArgumentResolvers 参数解析器*/
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers){
+        super.addArgumentResolvers(argumentResolvers);
+        // 如果 Controller 方法中的参数有 PageBounds 则从前台获取数据组装, 如果没有传递则给设置一个默认值
+        argumentResolvers.add(new HandlerMethodArgumentResolver() {
+            @Override
+            public boolean supportsParameter(MethodParameter methodParameter) {/*支持的属性*/
+                return PageBounds.class.isAssignableFrom(methodParameter.getParameterType());
+            }
+
+            /*添加属性的默认值*/
+            @Override
+            public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer,
+                                          NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory)
+                    throws Exception {
+                // 判断数据是否合理, 不合理就给定默认值
+                int limit = NumberUtils.toInt(nativeWebRequest.getParameter(Const.GLOBAL_LIMIT));
+                if (limit <= 0) limit = Const.DEFAULT_LIMIT;
+
+                //手机端只用limit
+                return new PageBounds(limit);
+            }
+        });
+    }
+
+    /*JsonResult  控制器自定义返回值*/
     @Override
     public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> returnValueHandlers) {
         super.addReturnValueHandlers(returnValueHandlers);

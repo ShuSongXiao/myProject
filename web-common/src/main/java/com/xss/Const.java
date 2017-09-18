@@ -35,4 +35,9 @@ public final class Const {
             HttpMethod.PATCH.name(),
             HttpMethod.TRACE.name()
     };
+
+    /** app 端传过来的 session 信息 */
+    public static final String TOKEN = "token";
+    /** app 端传过来的设备号名字 */
+    public static final String NO = "no";
 }

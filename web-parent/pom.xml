@@ -190,11 +190,12 @@
                 <version>${druid.version}</version>
             </dependency>
 
-            <!--<dependency>
+            <!-- Spring Boot Mybatis 依赖 -->
+            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter}</version>
-            </dependency>-->
+            </dependency>
 
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -206,11 +207,11 @@
                 <artifactId>mybatis-spring</artifactId>
                 <version>${mybatis-spring.version}</version>
             </dependency>
-            <!--<dependency>
+            <dependency>
                 <groupId>org.mybatis.caches</groupId>
                 <artifactId>mybatis-redis</artifactId>
                 <version>${mybatis-redis.version}</version>
-            </dependency>-->
+            </dependency>
             <!--
             mybatis 分页插件
             http://my.oschina.net/miemiedev/blog/135516

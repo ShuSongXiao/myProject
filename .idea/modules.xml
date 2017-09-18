@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/myProject.iml" filepath="$PROJECT_DIR$/myProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web-api/web-api.iml" filepath="$PROJECT_DIR$/web-api/web-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-redis/project-redis.iml" filepath="$PROJECT_DIR$/project-redis/project-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-test/project-test.iml" filepath="$PROJECT_DIR$/project-test/project-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spider-demo/spider-demo.iml" filepath="$PROJECT_DIR$/spider-demo/spider-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-common/web-common.iml" filepath="$PROJECT_DIR$/web-common/web-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-java-test/web-java-test.iml" filepath="$PROJECT_DIR$/web-java-test/web-java-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-parent/web-parent.iml" filepath="$PROJECT_DIR$/web-parent/web-parent.iml" />
