@@ -18,6 +18,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="project-redis" />
         <module name="project-test" />
+        <module name="schedule-job" />
         <module name="spider-demo" />
         <module name="web-common" />
         <module name="web-commont" />
@@ -30,6 +31,7 @@
       <module name="myProject" target="1.8" />
       <module name="project-redis" target="1.8" />
       <module name="project-test" target="1.8" />
+      <module name="schedule-job" target="1.8" />
       <module name="spider-demo" target="1.8" />
       <module name="web-api" target="1.8" />
       <module name="web-app" target="1.8" />

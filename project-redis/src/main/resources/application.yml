@@ -1,6 +1,6 @@
 # 数据源配置
 druid:
-  url: jdbc:mysql://192.168.32.180:3306/xssspace?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
+  url: jdbc:mysql://192.168.13.180:3306/xssspace?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
   userName: xsslibe
   password: xssroot
   filters: stat,wall
@@ -34,11 +34,18 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.32.180:3306/xssspace?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
+        url: jdbc:mysql://192.168.13.180:3306/xssspace?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
         username: xsslibe
         password: xssroot
   # 开启redis缓存session
   session.store-type: redis
+
+  rabbitmq:
+      host: 192.168.13.180
+      port: 5672
+      username: xss
+      password: xss
+      virtual-host: /
 
 
 

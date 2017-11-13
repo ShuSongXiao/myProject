@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="schedule-job:war">
+    <output-path>$PROJECT_DIR$/schedule-job/target</output-path>
+    <root id="archive" name="schedule-job-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="schedule-job:war exploded" />
+    </root>
+  </artifact>
+</component>

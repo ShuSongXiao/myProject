@@ -15,6 +15,8 @@ public interface SysConstant {
      */
     String BASE_URL = "https://search.jd.com/Search";
 
+    String DANDAN_29 = "https://www.dandan29.com/";
+
     interface Header {
         String ACCEPT = "Accept";
         String ACCEPT_ENCODING = "Accept-Encoding";

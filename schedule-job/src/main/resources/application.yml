@@ -1,0 +1,57 @@
+
+## org.springframework.boot.autoconfigure.web.ServerProperties
+server:
+  port: 7089
+
+online: false
+
+
+#domain:
+ # index:    http://127.0.0.1:7079             # pc 端用户对应的域名
+  #lawyer:   http://127.0.0.1:7078             # pc 端律师对应的域名
+ # api:      http://127.0.0.1:7080             # 接口调用对应的域名, 线上走 https
+ # manager:  http://127.0.0.1:7081             # 后台管理对应的域名
+
+ # still:    http://192.168.10.217:1080/static # 资源文件对应的域名, css png js 等
+ # upload:   http://127.0.0.1/upload           # 用户上传的图片、文件目录对应的域名
+
+uploadPath: /home/admin/upload/               # 图片、文件存放地址, 此目录与上面的 domain.upload 相对应
+
+# 默认会去找 classpath 下的 logback.xml. 为了达到 profile 的目的故意不用这个文件名
+logging.config: classpath:log-dev.xml
+
+
+# 数据源配置
+druid:
+  url: jdbc:mysql://192.168.10.224:3306/dev-lawyer?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
+  userName: root
+  password: root
+  filters: stat,wall
+
+
+
+##  https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+#spring:
+# org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+#  redis:
+#    host: 192.168.10.224
+#    port: 6380
+
+#  rabbitmq:
+#    host: 192.168.10.224
+#    port: 5672
+#    username: hxb
+#    password: hxb
+#    virtual-host: /
+
+#  datasource:
+ #   master:
+  #    url:  jdbc:mysql://192.168.114.3:3306/dev-lawyer?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.hhly.common.util.ShowSqlInterceptor
+  #    username: admin
+  #    password: admin
+  #    filters: stat,wall
+  #  cluster:
+  #    url:  jdbc:mysql://192.168.10.22:3306/news?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.hhly.common.util.ShowSqlInterceptor
+  #    username: lvzheng
+  #    password: 123456
+  #    filters: stat,wall

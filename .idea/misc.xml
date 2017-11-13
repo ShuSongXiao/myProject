@@ -8,6 +8,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/project-redis" />
+    <file type="web" url="file://$PROJECT_DIR$/schedule-job" />
     <file type="web" url="file://$PROJECT_DIR$/spider-demo" />
     <file type="web" url="file://$PROJECT_DIR$/web-api" />
     <file type="web" url="file://$PROJECT_DIR$/web-app" />
@@ -18,12 +19,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/web-api/pom.xml" />
-        <option value="$PROJECT_DIR$/web-app/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

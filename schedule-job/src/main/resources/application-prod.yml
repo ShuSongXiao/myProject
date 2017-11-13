@@ -1,0 +1,31 @@
+
+## org.springframework.boot.autoconfigure.web.ServerProperties
+server:
+#  port: 7081
+
+
+online: true
+
+
+domain:
+  index:    http://www.fy13322.com
+  lawyer:   http://lawyer.fy13322.com
+  api:      https://api.fy13322.com
+  manager:  http://boss.fy13322.com
+
+  still:    http://static.fy13322.com
+  upload:   http://resource.fy13322.com
+
+uploadPath: /data/lawyer/upload
+
+# 默认会去找 classpath 下的 logback.xml. 为了达到 profile 的目的故意不用这个文件名
+logging.config: classpath:log-prod.xml
+
+# 数据源配置
+druid:
+  url: jdbc:mysql://10.133.22.35:3306/lawyer?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+  userName: hhly_lawyer
+  password: hh$ly!2%01&61(01}8
+  filters: stat,wall
+
+

@@ -6,6 +6,6 @@ spring:
   datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.32.180:3306/xssspace?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
-      username: xsslibe
-      password: xssroot
+      url: jdbc:mysql://192.168.114.3:3306/dev-lawyer?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&statementInterceptors=com.xss.util.ShowSqlInterceptor
+      username: admin
+      password: admin
